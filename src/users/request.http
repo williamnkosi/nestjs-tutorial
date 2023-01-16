@@ -12,9 +12,26 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "mkosfdgi@gmaasdfil.com",
-    "password": "tesad"
+    "email": "twerdester@gmaasdfil1.com",
+    "password": "password13"
 }
+
+### Sign in as Existing user
+
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "twerdester@gmaasdfil1.com",
+    "password": "password13"
+}
+
+### Get the currently signed in user
+GET http://localhost:3000/auth/whoami
+
+### SignOut
+POST http://localhost:3000/auth/signout
+
 
 ### Remove a User 
 DELETE  http://localhost:3000/auth/1
