@@ -5,9 +5,9 @@ import {
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { UsersService } from './users.service';
-import { SerializeInterceptor } from 'src/interceptors/serialize.interceptor';
-
-
+import { UserDto } from './dto/user.dto';
+import { Serialize } from 'src/interceptors/serialize.interceptor';
+@Serialize(UserDto)
 @Controller('auth')
 export class UsersController {
 
@@ -18,7 +18,7 @@ export class UsersController {
         this.userService.create(body.email, body.password)
     }
 
-    @UseInterceptors(SerializeInterceptor)
+   
     @Get("/:id")
     async findUser(@Param("id") id: string) {
         console.log("handler is running")

@@ -3,7 +3,7 @@
 GET http://localhost:3000/auth/4
 
 ### Find a user
-GET http://localhost:3000/auth?email=m.w.nkosi@gmail.com
+GET http://localhost:3000/auth?email=mkosfdgi@gmaasdfil.com
 
 
 ### Create a User 
@@ -12,7 +12,7 @@ POST http://localhost:3000/auth/signup
 content-type: application/json
 
 {
-    "email": "mkosi@gmaasdfil.com",
+    "email": "mkosfdgi@gmaasdfil.com",
     "password": "tesad"
 }
 
